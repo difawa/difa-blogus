@@ -3053,7 +3053,7 @@ form.search-form .search-submit
 
 
 /* Difa's code */
-header{margin-bottom: 30px !important; margin-top: 15px !important;}
+header{margin-bottom: 30px !important; margin-top: 15px !important; --bs-gutter-x:0.75rem !important}
 .site-title{margin: 0 !important}
 
 

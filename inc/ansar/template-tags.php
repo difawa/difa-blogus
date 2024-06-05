@@ -114,18 +114,15 @@ if (!function_exists('blogus_menu_subscriber')) :
     }
 endif; 
 
-if (!function_exists('blogus_lite_dark_switcher')) :
 
-    function blogus_lite_dark_switcher() { $blogus_lite_dark_switcher = get_theme_mod('blogus_lite_dark_switcher','true');
-
-        if($blogus_lite_dark_switcher == true){ ?>
-          <label class="switch" for="switch">
-            <input type="checkbox" name="theme" id="switch">
-            <span class="slider"></span>
-          </label>
-        <?php }
-    }
-endif; 
+function difa_lite_dark_switcher() { $difa_lite_dark_switcher = get_theme_mod('blogus_lite_dark_switcher','true');
+    if($difa_lite_dark_switcher == true){ ?>
+        <label class="switch" for="switch">
+        <input type="checkbox" name="theme" id="switch">
+        <span class="slider"></span>
+        </label>
+    <?php }
+};
 
 if (!function_exists('blogus_menu_btns')) :
     function blogus_menu_btns() { 

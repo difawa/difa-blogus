@@ -22,12 +22,7 @@
         </a> 
     <?php } if($blogus_menu_subscriber == true) { ?>
     <a class="subscribe-btn" href="<?php echo esc_url($blogus_subsc_link); ?>" <?php if($blogus_subsc_open_in_new) { ?> target="_blank" <?php } ?> ><i class="fas fa-<?php echo $subsc_icon ; ?>"></i></a>
-    <?php } $blogus_lite_dark_switcher = get_theme_mod('blogus_lite_dark_switcher','true');
-        if($blogus_lite_dark_switcher == true){ ?>
-    <label class="switch" for="switch">
-        <input type="checkbox" name="theme" id="switch">
-        <span class="slider"></span>
-    </label>
-    <?php } ?>         
+    <?php } difa_lite_dark_switcher() ?>
+             
     </div>
 </div>
