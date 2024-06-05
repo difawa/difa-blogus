@@ -88,31 +88,26 @@ if (!function_exists('blogus_post_meta')) :
 <?php
 }
 endif; 
+function difa_menu_search() { $difa_menu_search  = get_theme_mod('blogus_menu_search','true'); 
 
-if (!function_exists('blogus_menu_search')) :
+    if($difa_menu_search == true) { ?>
+        <a class="msearch ml-auto"  data-bs-target="#exampleModal"  href="#" data-bs-toggle="modal" aria-label="search button">
+        <svg width="16" height="16" fill="none" viewBox="1 1 23 23">
+            <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </a> 
+    <?php } 
+};
 
-    function blogus_menu_search() { $blogus_menu_search  = get_theme_mod('blogus_menu_search','true'); 
-    
-        if($blogus_menu_search == true) { ?>
-            <a class="msearch ml-auto"  data-bs-target="#exampleModal"  href="#" data-bs-toggle="modal" aria-label="search button">
-                <i class="fa fa-search"></i>
-            </a> 
-        <?php } 
-    }
-endif; 
+function difa_menu_subscriber() { 
+    $difa_menu_subscriber  = get_theme_mod('blogus_menu_subscriber','true');
+    $difa_subsc_link = get_theme_mod('blogus_subsc_link', '#'); 
+    $difa_subsc_open_in_new  = get_theme_mod('blogus_subsc_open_in_new', true);
 
-if (!function_exists('blogus_menu_subscriber')) :
-
-    function blogus_menu_subscriber() { 
-        $blogus_menu_subscriber  = get_theme_mod('blogus_menu_subscriber','true');
-        $blogus_subsc_link = get_theme_mod('blogus_subsc_link', '#'); 
-        $blogus_subsc_open_in_new  = get_theme_mod('blogus_subsc_open_in_new', true);
-
-        if($blogus_menu_subscriber == true) { ?>
-          <a class="subscribe-btn" href="<?php echo esc_url($blogus_subsc_link); ?>" <?php if($blogus_subsc_open_in_new) { ?> target="_blank" <?php } ?>  ><i class="fas fa-bell"></i></a>
-        <?php } 
-    }
-endif; 
+    if($difa_menu_subscriber == true) { ?>
+        <a class="subscribe-btn" href="<?php echo esc_url($difa_subsc_link); ?>" <?php if($difa_subsc_open_in_new) { ?> target="_blank" <?php } ?>  ><i class="fas fa-bell"></i></a>
+    <?php } 
+};
 
 
 function difa_lite_dark_switcher() { $difa_lite_dark_switcher = get_theme_mod('blogus_lite_dark_switcher','true');
@@ -124,13 +119,12 @@ function difa_lite_dark_switcher() { $difa_lite_dark_switcher = get_theme_mod('b
     <?php }
 };
 
-if (!function_exists('blogus_menu_btns')) :
-    function blogus_menu_btns() { 
-        blogus_menu_search();
-        blogus_menu_subscriber();
-        blogus_lite_dark_switcher();
-    }
-endif; 
+
+function difa_menu_btns() { 
+    difa_menu_search();
+    difa_menu_subscriber();
+    difa_lite_dark_switcher();
+};
 
 if (!function_exists('get_archive_title')) :
         
