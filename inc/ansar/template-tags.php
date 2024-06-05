@@ -105,7 +105,13 @@ function difa_menu_subscriber() {
     $difa_subsc_open_in_new  = get_theme_mod('blogus_subsc_open_in_new', true);
 
     if($difa_menu_subscriber == true) { ?>
-        <a class="subscribe-btn" href="<?php echo esc_url($difa_subsc_link); ?>" <?php if($difa_subsc_open_in_new) { ?> target="_blank" <?php } ?>  ><i class="fas fa-bell"></i></a>
+        <a class="subscribe-btn" href="<?php echo esc_url($difa_subsc_link); ?>" <?php if($difa_subsc_open_in_new) { ?> target="_blank" <?php } ?>  >
+        <svg width="16" height="16" viewBox="0 -1 32 32" fill="#fff">
+        <g transform="translate(-206.000000, -310.000000)">
+        <path d="M224,330 L227,330 L227,316 L224,316 L224,330 Z M236,310 L229,314.667 L229,331.333 L236,336 C237.104,336 238,335.104 238,334 L238,312 C238,310.896 237.104,310 236,310 L236,310 Z M206,323 C206,326.733 208.561,329.148 212.019,329.81 L212,330 L212,338 C212,339.104 212.896,340 214,340 L217,340 C218.104,340 219,339.104 219,338 L219,330 L222,330 L222,316 L214,316 C209.582,316 206,318.582 206,323 L206,323 Z" id="megaphone" sketch:type="MSShapeGroup"></path>
+        </g>
+    </svg>
+        </a>
     <?php } 
 };
 
