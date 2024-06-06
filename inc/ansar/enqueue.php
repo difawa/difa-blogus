@@ -1,5 +1,5 @@
 <?php function blogus_scripts() {
-	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
+	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css',[] , filemtime(get_template_directory().'/css/bootstrap.css'));
 	wp_enqueue_style( 'blogus-style-parent', get_stylesheet_uri(), [], filemtime(get_template_directory().'/style.css'));
     wp_enqueue_style( 'blogier-default-css', get_template_directory_uri()."/css/colors/default.css", [], filemtime(get_template_directory().'/css/colors/default.css'));
 	wp_enqueue_style('all-css',get_template_directory_uri().'/css/all.css');
