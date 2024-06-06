@@ -9,9 +9,7 @@
  * @package Blogus
  */
 get_header(); ?>
-<main id="content" class="container">
-    <!--row-->
-    <div class="row">
+<main id="content" class="container row">
         <!--col-md-8-->
         <?php $blogus_content_layout = esc_attr(get_theme_mod('blogus_content_layout','align-content-right'));
         if($blogus_content_layout == "align-content-left" || $blogus_content_layout == "grid-left-sidebar") { ?>
@@ -50,7 +48,6 @@ get_header(); ?>
                 </aside>
             <!--/col-md-4-->
         <?php } ?>
-    </div><!--/row-->
 </main>                
 <?php
 get_footer();
